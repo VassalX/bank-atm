@@ -1,0 +1,43 @@
+<% include common/header.ejs %>
+<body>
+<div id="top-bar">
+    <div id="logo">
+        <h1 class="h1 font-weight-bold">BANK</h1>
+    </div>
+</div>
+<div class="text-center d-flex align-items-center">
+    <div class="container info-cont">
+        <div class="col form-update">
+            <form id="transfer-from">
+                <h1 class="h3 font-weight-normal">Transfer</h1>
+
+                <p id="messageAmount" class="isRed"></p>
+                <p id="messageCardFrom" class="isRed"></p>
+                <p id="messageCardTo" class="isRed"></p>
+                <p id="messagePassword" class="isRed"></p>
+
+                <label for="amount" class="sr-only">Amount</label>
+                <input type="tel" id="amount" class="form-control middle-form" placeholder="Amount" required>
+
+
+                <select class="form-control middle-form" id="cardFrom" required>
+
+                </select>
+
+                <label for="cardTo" class="sr-only">Card to</label>
+                <input type="text" id="cardTo" class="form-control middle-form" placeholder="Card to" required>
+
+                <label for="currentPassword" class="sr-only">Password</label>
+                <input type="password" id="currentPassword" class="form-control bottom-form" placeholder="Current Password" required>
+                <button id="transferButton" class="btn btn-lg btn-primary btn-block" type="button" disabled>Transfer</button>
+            </form>
+            <form action="/profile" method="get">
+                <button class="btn btn-lg btn btn-outline-dark btn-block back-b">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

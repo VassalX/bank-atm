@@ -1,0 +1,64 @@
+<% include common/header.ejs %>
+<body>
+<div id="top-bar">
+    <div id="logo">
+        <h1 class="h1 font-weight-bold">BANK</h1>
+    </div>
+</div>
+<div id="main-box" class="container">
+    <div class="row">
+        <div class="cont col">
+            <div class="block-col">
+                <div class="top-part-col">
+                    Cards of <span id="name" class="font-weight-bold"><%= user.firstName %> <%= user.lastName %></span>
+                </div>
+                <div id="cards-list" class="bottom-part-col">
+
+                </div>
+            </div>
+        </div>
+        <div class="cont col">
+            <div class="block-col">
+                <div class="top-part-col">
+                    Options
+                </div>
+                <div class="bottom-part-col-opt">
+                    <div id="functions" class="row opt-row">
+                        <div id="transfer" class="col-4 col-lg-3">
+                            <div class="opt">
+                                <img src="assets/images/money-bill-wave-solid.svg" class="opt-img">
+                                <div class="opt-text">Transfer</div>
+                            </div>
+                        </div>
+                        <div id="settings" class="col-4 col-lg-3">
+                            <div class="opt">
+                                <img src="assets/images/user-cog-solid.svg" class="opt-img">
+                                <div class="opt-text ">User settings</div>
+                            </div>
+                        </div>
+                        <div id="addCard" class="col-4 col-lg-3">
+                            <div class="opt">
+                                <img src="assets/images/credit-card-regular.svg" class="opt-img">
+                                <div class="opt-text">Add debit card</div>
+                            </div>
+                        </div>
+                        <div id="topUp" class="col-4 col-lg-3">
+                            <div class="opt">
+                                <img src="assets/images/phone-solid.svg" class="opt-img">
+                                <div class="opt-text">Top up phone</div>
+                            </div>
+                        </div>
+                        <div id="logout" class="col-4 col-lg-3">
+                            <div class="opt">
+                                <img src="assets/images/door-open-solid.svg" class="opt-img">
+                                <div class="opt-text">Logout</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

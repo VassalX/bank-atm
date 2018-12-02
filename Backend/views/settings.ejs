@@ -1,0 +1,66 @@
+<% include common/header.ejs %>
+<body>
+<div id="top-bar">
+    <div id="logo">
+        <h1 class="h1 font-weight-bold">BANK</h1>
+    </div>
+</div>
+<div class="text-center d-flex align-items-center">
+    <div class="container info-cont">
+        <div class="row" style="max-width: 900px; margin: auto">
+            <div class="col">
+                <h1 class="h3 font-weight-normal">Current info</h1>
+                <table class="info table">
+                    <tbody>
+                    <tr>
+                        <th scope="row">First Name</th>
+                        <th scope="row" id="firstNameVal"><%= user.firstName %></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Last Name</th>
+                        <th scope="row" id="lastNameVal"><%= user.lastName %></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Phone Number</th>
+                        <th scope="row" id="telVal"><%= user.phone %></th>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-update" class="col">
+                <form>
+                    <h1 class="h3 font-weight-normal">Update info</h1>
+
+                    <p id="messageFirstName" class="isRed"></p>
+                    <p id="messageLastName" class="isRed"></p>
+                    <p id="messageTel" class="isRed"></p>
+                    <p id="messagePassword" class="isRed"></p>
+                    <p id="messagePasswordConf" class="isRed"></p>
+
+                    <label for="updateFirstName" class="sr-only">First name</label>
+                    <input type="text" id="updateFirstName" class="form-control top-form" placeholder="New First name">
+
+                    <label for="updateLastName" class="sr-only">First name</label>
+                    <input type="text" id="updateLastName" class="form-control middle-form" placeholder="New Last name">
+
+                    <label for="updateTel" class="sr-only">Phone Number</label>
+                    <input type="tel" id="updateTel" class="form-control middle-form" placeholder="New Phone number">
+
+                    <label for="updatePassword" class="sr-only">Password</label>
+                    <input type="password" id="updatePassword" class="form-control bottom-form" placeholder="New Password">
+
+                    <label for="currentPassword" class="sr-only">Password</label>
+                    <input type="password" id="currentPassword" class="form-control sep-form" placeholder="Current Password" required>
+                    <button id="updateButton" class="btn btn-lg btn-primary btn-block" type="button"  disabled>Update</button>
+                </form>
+                <form action="/profile" method="get">
+                    <button class="btn btn-lg btn btn-outline-dark btn-block back-b">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

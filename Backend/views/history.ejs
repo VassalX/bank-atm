@@ -1,0 +1,64 @@
+<% include common/header.ejs %>
+<body>
+<div id="top-bar">
+    <div id="logo">
+        <h1 class="h1 font-weight-bold">BANK</h1>
+    </div>
+</div>
+<div class="text-center d-flex align-items-center">
+    <div class="container info-cont">
+        <div class="col">
+            <div class="history-cont">
+                <h1 class="h3 font-weight-normal">Transfer history</h1>
+                <h1 class="h4 font-weight-normal">Card #<span id="card">4444 4444 4444 4444</span></h1>
+                <form class="date-form container">
+                    <div class="row">
+                        <div class="col date-input">
+                            <label for="dateFrom">From:</label>
+                            <input type="date" class="form-control" id="dateFrom">
+                        </div>
+                        <div class="col date-input">
+                            <label for="dateTo">To:</label>
+                            <input type="date" class="form-control" id="dateTo">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="col btn btn-lg btn-primary btn-block" type="submit">Get history</button>
+                        </div>
+
+                    </div>
+                </form>
+                <div class="history">
+                    <table class="history-elem table">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Purpose</th>
+                            <th scope="col">Amount</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">2</th>
+                            <th>
+                                <div>
+                                    Top up 380954034700
+                                </div>
+                            </th>
+                            <th>100</th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <form action="/profile" method="get">
+                    <button class="btn btn-lg btn btn-outline-dark btn-block back-b">
+                        <i class="fas fa-arrow-left"></i> Back
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

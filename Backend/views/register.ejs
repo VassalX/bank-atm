@@ -1,0 +1,38 @@
+<% include common/header.ejs %>
+<body class="text-center d-flex align-items-center">
+<div class="form-signup">
+    <form>
+        <h1 class="h1 font-weight-normal">BANK</h1>
+        <h1 class="h3 font-weight-normal">Please sign up</h1>
+
+        <p id="messageFirstName" class="isRed"></p>
+        <p id="messageLastName" class="isRed"></p>
+        <p id="messageTel" class="isRed"></p>
+        <p id="messagePassword" class="isRed"></p>
+        <p id="messagePasswordConf" class="isRed"></p>
+
+        <label for="inputFirstName" class="sr-only">First name</label>
+        <input type="text" id="inputFirstName" class="form-control top-form" placeholder="First name" required autofocus>
+
+        <label for="inputLastName" class="sr-only">First name</label>
+        <input type="text" id="inputLastName" class="form-control middle-form" placeholder="Last name" required>
+
+        <label for="inputTel" class="sr-only">Email address</label>
+        <input type="tel" id="inputTel" class="form-control middle-form" placeholder="Phone number" required>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control middle-form" placeholder="Password" required>
+
+        <label for="inputPasswordConf" class="sr-only">Password</label>
+        <input type="password" id="inputPasswordConf" class="form-control bottom-form" placeholder="Password confirm" required>
+
+        <button id="registerButton" class="btn btn-lg btn-primary btn-block" type="button" disabled>Sign up</button>
+    </form>
+    <form action="/login" method="get">
+        <button class="btn btn-lg btn btn-outline-dark btn-block back-b">
+            <i class="fas fa-arrow-left"></i> Back
+        </button>
+    </form>
+</div>
+</body>
+</html>
